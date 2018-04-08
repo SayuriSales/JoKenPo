@@ -10,5 +10,15 @@ class SplashscreenActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_splashscreen)
+        
+        carregar()
     }
+    
+    
+        fun carregar(){
+            Handler().postDelayed({
+                startActivity(Intent(this, GameActivity::class.java))
+                finish()
+            }, tempo)
+        }
 }
